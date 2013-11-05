@@ -1,24 +1,34 @@
 window.onload=init;
+var name="meng";
 function init(){
-	var b = new MaoChong("b","red");	
-//	b.put();
-	b.sayColor();
-}
-function A(name){
-	this.name = name;
+	var a ="xuhuiyuan";
+	var b =2;
+	a=a.replace("xu","meng");
+	alert(a);
+	var name="ying";	
+	var obj = {
+		name: "xu",
+		getName:function(){
+			return this.name;
+		}	
+	}
 	
+	var a = na;
+	var arr = [1,2,3];
+	//alert(arr.toString());
+	 
 }
-A.prototype.put=function(){
-	alert("I am"+this.name);
+function na() {
+	return name;
 }
-function MaoChong(name,color){
-	this.newMethod = A;
-	this.newMethod(name);
-	delete this.newMethod;
-
-	this.color = color;
-
-}
-MaoChong.prototype.sayColor= function(){
-	alert(this.color);
+function add(num1,num2){
+	if(num1>num2){
+		return -1;
+	}else if(num1<num2){
+		return 1;
+	}
+	else {
+		return 0;
+	}
+	
 }

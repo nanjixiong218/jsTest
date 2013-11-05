@@ -1,0 +1,16 @@
+	var a = "first second third"	
+	var reg = /\b(\S+?)\b/g;
+	var reg1 = /(\w+)/;
+	var arrWords = a.match(reg);
+	var arrWords1 = a.match(reg1);
+	alert(arrWords1);
+
+	reg1居然还匹配出first，first
+
+	var reg2 = /\w+/g;
+	这种贪婪性匹配会匹配出first，second，third
+	不带/g的只能匹配first
+	
+	/g是当发现一个匹配后，会去掉匹配部分，继续对剩余部分进行匹配？
+
+	exec不太理解，得到的数组第一个条目是第一个匹配，其它的是反向引用？数组长度明明只有1
